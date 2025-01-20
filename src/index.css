@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg;
+  }
+  
+  .primary-button {
+    @apply bg-blue-600 hover:bg-blue-700 text-white transition-all duration-200;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
